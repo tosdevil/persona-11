@@ -50,7 +50,7 @@ class BasicCharacterController {
   _Init(params) {
     this._params = params;
     this._decceleration = new THREE.Vector3(-0.0005, -0.0001, -5.0);
-    this._acceleration = new THREE.Vector3(1, 0.25, 50.0);
+    this._acceleration = new THREE.Vector3(2, 0.5, 100.0);
     this._velocity = new THREE.Vector3(0, 0, 0);
     this._position = new THREE.Vector3();
 
@@ -94,7 +94,7 @@ class BasicCharacterController {
       const loader = new FBXLoader(this._manager);
       loader.setPath('./resources/zombie/');
       loader.load('test_walk.fbx', (a) => { _OnLoad('walk', a); });
-      loader.load('run.fbx', (a) => { _OnLoad('run', a); });
+      loader.load('testingrun.fbx', (a) => { _OnLoad('run', a); });
       loader.load('idle.fbx', (a) => { _OnLoad('idle', a); });
       loader.load('dance.fbx', (a) => { _OnLoad('dance', a); });
     });
